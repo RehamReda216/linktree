@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reham | Links</title>
+  <title>Reham Reda | Turning Ideas into Interfaces</title>
    <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/icon.png">
@@ -20,6 +20,7 @@
       text-align: center;
       padding-top: 5px;
       padding-inline: 20px;
+      animation: gradientMove 12s ease infinite;
     }
 
     .profile-pic {
@@ -95,6 +96,50 @@
     .social-icons a:hover {
       color: #fca61f;
     }
+  /* Animation Keyframes */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+   /* Apply animations */
+    .profile-pic,
+    h1,
+    .tagline,
+    .description,
+    .social-icons,
+    .btn {
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    /* Delays for nicer sequence */
+    .profile-pic { animation-delay: 0.2s; }
+    h1 { animation-delay: 0.4s; }
+    .tagline { animation-delay: 0.6s; }
+    .description { animation-delay: 0.8s; }
+    .social-icons { animation-delay: 1s; }
+    .btn:nth-of-type(1) { animation-delay: 1.2s; }
+    .btn:nth-of-type(2) { animation-delay: 1.4s; }
+    .btn:nth-of-type(3) { animation-delay: 1.6s; }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
